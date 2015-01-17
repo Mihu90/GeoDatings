@@ -122,42 +122,11 @@ class API extends REST {
         // Trimite raspunsul utilizatorului
         $this->response($this->json(array('registerID' => $response)), 200);
      }
-     
-     /*
-      * Functie necesara pentru a obtine ultimile evenimente din sistem.
-      */
-     private function api_latest_events(){           
-        $start_index = intval($_GET['start_index']);
-        $per_page = intval($_GET['per_page']);
-			
-        $query = "SELECT SQL_CALC_FOUND_ROWS deal_id, title, DATE_FORMAT(end_date, '%D %M %Y') as end_date,     
-                   after_discount_value, start_value, icon, image
-                  FROM tbl_deals d, categories c 
-                  WHERE d.category_id = c.id AND CURDATE() <= d.end_date 
-                  ORDER BY deal_id DESC 
-                  LIMIT $start_index, $per_page";
-        $sql = $this->db->query($query);
-        $result = array();
-        $result_total = 0;
-        if ($sql !== false) {
-            while ($row = mysqli_fetch_array($sql, MYSQLI_ASSOC)) {
-                $result[] = $row;
-            }
-            
-            $query = self::SQL_SELECT_NUM_ROWS;
-            $sql = $this->db->query($query);
-            $row = mysqli_fetch_array($sql, MYSQLI_ASSOC);
-            $result_total = $row['count'];
-        }
-            
-        $this->response($this->json(array('count' => $result_total,
-                                          'latestDeals' => $result)), 200);
-    }
     
     /*
       * Functie necesara pentru a obtine ultimile evenimente din sistem.
       */
-     private function api_latest_events1(){           
+     private function api_latest_events(){
         $start_index = intval($_GET['start_index']);
         $per_page = intval($_GET['per_page']);
         
