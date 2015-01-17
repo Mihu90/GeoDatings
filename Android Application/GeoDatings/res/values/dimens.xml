@@ -1,0 +1,44 @@
+<resources>
+	<dimen name="padding_main">8dp</dimen>
+	<dimen name="padding_main_content">10dp</dimen>
+    
+	<dimen name="shadow_width">15dp</dimen>
+	<dimen name="menu_offset">60dp</dimen>
+    
+    <dimen name="loading_view_margin_layout">10dp</dimen>
+	<dimen name="loading_view_progress_size">50dp</dimen>
+	<dimen name="loading_view_margin_right">5dp</dimen>
+	
+    <dimen name="margin_menu">10dp</dimen>
+    <dimen name="margin_top_home_deal">138dp</dimen>
+    <dimen name="margin_top_home_start_deal">7dp</dimen>
+    <dimen name="margin_top_title">7dp</dimen>   
+    <dimen name="margin_left_home_deal">10dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="margin_share">10dp</dimen>
+    
+    <dimen name="padding_menu_list_row">10dp</dimen>
+    <dimen name="padding_detail_price">6dp</dimen>
+    <dimen name="padding_search">10dp</dimen>
+    <dimen name="padding_detail_info">10dp</dimen>
+    <dimen name="padding_detail_content_bottom">65dp</dimen>
+	<dimen name="padding_detail_btn_content_left">18dp</dimen>
+	<dimen name="padding_detail_btn_content_top">4dp</dimen>
+	
+    <dimen name="thumb_height">170dp</dimen>
+    <dimen name="padding_menu">10dp</dimen>
+	<dimen name="thumb_margin_right">10dp</dimen>
+		
+    <dimen name="splash_padding_left">30dp</dimen>
+    <dimen name="splash_padding_right">30dp</dimen>
+	<dimen name="progress_width">180dp</dimen>
+
+    <dimen name="padding_zoom">20dp</dimen>
+    <dimen name="margin_zoom_seekbar">10dp</dimen>
+	
+	<dimen name="line_height">1dp</dimen>
+	
+	<dimen name="marker_size">36dp</dimen>
+	
+    <dimen name="navigation_drawer_width">240dp</dimen>
+</resources>

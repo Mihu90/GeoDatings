@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/Background_main">
+	<ProgressBar 
+	    android:id="@+id/prgPageLoading"
+	    android:layout_width="fill_parent"
+	    android:layout_height="3dp"
+	    android:layout_alignParentTop="true"
+	    style="@android:style/Widget.ProgressBar.Horizontal"
+	    android:progressDrawable="@drawable/progress_horizontal_apptheme"
+	    android:visibility="gone"/>
+    <WebView
+	    android:id="@+id/web"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/prgPageLoading"
+	    android:scrollbarStyle="insideInset"
+	    android:scrollbars="none"/>
+    
+   	<LinearLayout 
+        android:id="@+id/lytRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       	android:layout_centerInParent="true"
+       	android:gravity="center"
+       	android:visibility="gone">
+        <TextView  
+		    android:id="@+id/lblAlert"
+		    android:text="@string/no_internet_connection"
+		    android:textColor="@color/text_sub_title"
+   		    android:gravity="center"
+		    android:layout_width="wrap_content"    
+		    android:layout_height="wrap_content"
+		    style="@android:style/TextAppearance.Medium"/>
+        <Button 
+	        android:id="@+id/btnRetry"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/retry"
+	        android:textColor="@color/text_btn"
+	        android:background="@drawable/apptheme_btn_default_holo_light"
+		   	style="@android:style/TextAppearance.Medium"/>
+   </LinearLayout>
+</RelativeLayout>

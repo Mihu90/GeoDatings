@@ -1,0 +1,16 @@
+<ListView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	
+       	android:id="@+id/list"
+       	android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+    	android:background="@color/menu_background"
+       	android:fadeScrollbars="true"
+       	android:fastScrollEnabled="true"
+       	android:divider="@color/menu_line"
+       	android:listSelector="@drawable/apptheme_list_selector_holo_light"
+		android:dividerHeight="1dp"
+		android:fadingEdge="none"
+		android:cacheColorHint="@android:color/transparent">  
+</ListView>

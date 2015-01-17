@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ro.mihaisurdeanu.geodatings"
+    android:versionCode="6"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <permission
+        android:name="ro.mihaisurdeanu.geodatings.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="ro.mihaisurdeanu.geodatings.permission.C2D_MESSAGE" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+  	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+  	
+  	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  	
+  	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	
+	<permission
+    	android:name="ro.mihaisurdeanu.geodatings.permission.MAPS_RECEIVE"
+    	android:protectionLevel="signature"/>
+  	<uses-permission android:name="ro.mihaisurdeanu.geodatings.permission.MAPS_RECEIVE"/>
+      
+  	<uses-feature
+    	android:glEsVersion="0x00020000"
+    	android:required="true"/>
+  	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Apptheme" >
+        
+        <meta-data 
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        
+	    <meta-data
+	    	android:name="com.google.android.maps.v2.API_KEY"
+	    	android:value="@string/googleMapsKey"/>
+	       
+        <activity
+            android:name="ro.mihaisurdeanu.geodatings.SplashActivity"
+            android:label="@string/app_name" 
+            android:theme="@android:color/transparent"
+            android:noHistory="true" 
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="ro.mihaisurdeanu.geodatings.AboutActivity"
+            android:label="@string/page_about" />
+        
+        <activity
+            android:name="ro.mihaisurdeanu.geodatings.CategoryActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/page_category" />
+        
+        <activity
+            android:name="ro.mihaisurdeanu.geodatings.CategoryListActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" />
+        
+        <activity
+            android:name="ro.mihaisurdeanu.geodatings.MapActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/page_around_you" />
+        
+        <activity
+            android:name="ro.mihaisurdeanu.geodatings.AddEventActivity"
+            android:screenOrientation="portrait"/>
+        
+        <activity
+            android:name="ro.mihaisurdeanu.geodatings.HomeActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <meta-data android:name="android.app.default_searchable"
+               android:value="ro.mihaisurdeanu.geodatings.SearchActivity" />
+        
+        </activity>
+        
+        <activity 
+            android:name="ro.mihaisurdeanu.geodatings.SearchActivity"
+            android:screenOrientation="portrait">
+            <intent-filter >
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            
+            <meta-data 
+                android:name="android.app.searchable"
+               	android:resource="@xml/searchable"/>
+        </activity>
+        
+        <activity
+            android:name="ro.mihaisurdeanu.geodatings.SettingActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/page_setting" />
+        
+        <activity
+            android:name="ro.mihaisurdeanu.geodatings.ActivitySettings"
+            android:screenOrientation="portrait"
+            android:label="@string/page_setting" />
+        
+        <activity 
+            android:name="com.facebook.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebookApplicationId"/>
+        
+        <provider 
+            android:name="ro.mihaisurdeanu.geodatings.libraries.SuggestionProvider"
+      		android:authorities="ro.mihaisurdeanu.geodatings.libraries.SuggestionProvider"
+      		android:exported="false"/>
+        
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="ro.mihaisurdeanu.geodatings" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="ro.mihaisurdeanu.geodatings.GCMIntentService"/>
+        
+    </application>
+
+</manifest>

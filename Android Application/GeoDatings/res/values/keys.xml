@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cheie necesara pentru a integra aplicatia Facebook. -->
+	<string name="facebookApplicationId">892219360823431</string>
+	
+	<!-- Cheie necesara pentru a integra serviciul Google Maps v2 -->
+	<string name="googleMapsKey">AIzaSyCH3nlXNAwadg-sevh4v3J9jZa8uo0rTm8</string>
+</resources>

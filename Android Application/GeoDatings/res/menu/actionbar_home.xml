@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:compat="http://schemas.android.com/apk/res-auto" >
+    
+    
+    <item android:id="@+id/abSearch"
+          android:title="@string/menu_search"
+          android:icon="@drawable/ic_search"
+          compat:showAsAction="ifRoom|collapseActionView"
+          compat:actionViewClass="android.support.v7.widget.SearchView" />
+    
+    <item android:id="@+id/abAroundYou"
+		  android:icon="@drawable/ic_location_found"
+		  android:title="@string/menu_arround"
+		  compat:showAsAction="ifRoom"/>
+    
+</menu>

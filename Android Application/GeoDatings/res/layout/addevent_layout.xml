@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="400dp">
+
+	<TableLayout
+    	android:id="@+id/tableLayout1"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content" >
+ 
+		<!-- Randul cu titlul -->
+    	<TableRow
+        	android:id="@+id/addTableRow1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip" >
+        
+        	<TextView
+            	android:id="@+id/addEventTitleLabel"
+            	android:text="Subject"
+            	android:layout_gravity="end"
+            	android:textAppearance="?android:attr/textAppearanceMedium" />
+ 
+        	<EditText
+            	android:id="@+id/addEventTitle"
+            	android:inputType="text"
+            	android:text="" />
+    	</TableRow>
+    	
+    	<!-- Randul cu adresa -->
+    	<TableRow
+        	android:id="@+id/addTableRow2"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip" >
+        
+        	<TextView
+            	android:id="@+id/addEventAddressLabel"
+            	android:text="Where"
+            	android:layout_gravity="end"
+            	android:textAppearance="?android:attr/textAppearanceMedium" />
+ 
+        	<EditText
+            	android:id="@+id/addEventAddress"
+            	android:inputType="text"
+            	android:text="" />
+    	</TableRow>
+    	
+    	<!-- Randul cu data la care are loc evenimentul -->
+    	<TableRow
+        	android:id="@+id/addTableRow3"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip" >
+        
+        	<TextView
+            	android:id="@+id/addEventWhenLabel"
+            	android:layout_span="2"
+            	android:text="Until"
+            	android:textAppearance="?android:attr/textAppearanceMedium" />
+    	</TableRow>
+    	
+    	<!-- Randul cu selectia datei -->
+    	<TableRow
+        	android:id="@+id/addTableRow4"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip" >
+        
+        	<DatePicker
+        		android:id="@+id/addEventWhen"
+        		android:layout_span="2"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:calendarViewShown="false"
+        		android:spinnersShown="true"/>
+    	</TableRow>
+
+    	<View
+        	android:layout_height="2dip"
+        	android:background="#B0B0B0" />
+ 
+	</TableLayout>
+</ScrollView>

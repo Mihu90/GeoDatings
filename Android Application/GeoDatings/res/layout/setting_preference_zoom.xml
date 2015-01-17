@@ -1,0 +1,42 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:padding="@dimen/padding_zoom">
+
+	<TextView
+		android:id="@+id/current_value"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/text_title" />
+		
+	<SeekBar
+		android:id="@+id/seek_bar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/current_value"
+		android:layout_marginTop="@dimen/margin_zoom_seekbar" />
+	
+	<TextView
+		android:id="@+id/min_value"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/seek_bar"
+		android:layout_alignParentLeft="true"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/text_sub_title_setting"
+             />
+
+	<TextView
+		android:id="@+id/max_value"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/seek_bar"
+		android:layout_alignParentRight="true"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/text_sub_title_setting"/>		
+				
+</RelativeLayout>

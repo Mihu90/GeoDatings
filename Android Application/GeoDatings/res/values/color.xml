@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- ActivitySplash -->
+    <color name="splash_background">#ebebeb</color>
+    
+    <!-- Menu -->
+    <color name="menu_frame">#ffffff</color>
+    <color name="menu_text">#ffffff</color>
+    <color name="menu_background">#2f3233</color>
+    <color name="menu_line">#1e1e1e</color>
+    
+    <!-- Background -->
+    <color name="Background_main">#ebebeb</color>
+    <color name="Background_main_content">#ffffff</color>
+    <color name="Background_detail_btn">#2f3233</color>
+    <color name="Background_actionbar">#6bb40b</color>
+    
+    <!-- Line Divider -->
+    <color name="divider">#ebebeb</color>
+    
+    <!-- ActionBar -->
+    <color name="actionbar_title_color">#ffffff</color>
+    
+    <color name="home_layout_price">#0b9ff9</color>
+    
+    <!-- Text -->
+    <color name="title_app">#ffffff</color>
+    <color name="text_title">#454547</color>
+    <color name="text_sub_title">#777777</color>
+    <color name="text_deal">#ffffff</color>
+    <color name="text_deal_detail">#0b9ff9</color>
+    <color name="text_disc">#c60c0c</color>
+    <color name="text_sub_title_setting">#777777</color>
+    <color name="text_link">#6bb40b</color>
+    <color name="text_btn">#ffffff</color>
+</resources>

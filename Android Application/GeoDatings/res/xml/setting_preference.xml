@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:example="http://schemas.android.com/apk/res/ro.mihaisurdeanu.geodatings">
+
+    <PreferenceCategory 
+	    android:key="key_server_category"
+        android:title="@string/setting_cat_server">
+        
+        <EditTextPreference
+            android:key="@string/setting_prefkey_server"
+            android:title="@string/setting_server_title"
+            android:summary="@string/setting_server_summary"
+        	android:layout="@layout/setting" />
+        
+        <ListPreference
+            android:key="@string/setting_prefkey_apis"
+ 			android:title="@string/setting_apis_title"
+ 			android:summary="@string/setting_apis_summary"
+ 			android:layout="@layout/setting" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory 
+	    android:key="key_social_category"
+        android:title="@string/social">
+        
+        <CheckBoxPreference
+	    	android:key="@string/setting_prefkey_facebook"
+			android:title="@string/facebook"
+	        android:defaultValue="false" 
+	        android:layout="@layout/setting"/>
+
+	</PreferenceCategory>
+        
+	<PreferenceCategory
+	    android:key="key_map_category"
+	    android:title="@string/map">
+        	
+		<ListPreference
+	    	android:key="@string/preferences_type"
+			android:title="@string/view_type" 
+		    android:summary="Normal"
+		    android:entries="@array/lbl_array_view_type"		    
+            android:entryValues="@array/lbl_array_view_type"
+            android:defaultValue="Normal"
+            android:layout="@layout/setting"/>
+		    		
+	    <ro.mihaisurdeanu.geodatings.setting.PreferenceZoom
+	        android:key="@string/preferences_zoom"
+		    android:title="@string/zoom_dialog_title"
+		    android:dialogTitle="@string/zoom_dialog_title"
+		    android:summary="@string/zoom_summary"
+		    android:layout="@layout/setting"
+		    android:persistent="true"
+		    android:defaultValue="10"
+		    example:minValue="1"
+		    example:maxValue="15"/>    	
+	</PreferenceCategory>
+	
+	<PreferenceCategory 
+	    android:key="key_help_category"
+        android:title="@string/help">
+        
+        <CheckBoxPreference
+	    	android:key="@string/preferences_overlay"
+			android:title="@string/overlay_title"
+	        android:defaultValue="false" 
+	        android:layout="@layout/setting"/>
+
+	</PreferenceCategory>
+
+</PreferenceScreen>
