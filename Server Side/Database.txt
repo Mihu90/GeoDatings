@@ -1,0 +1,95 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.10.7
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jan 18, 2015 at 12:18 AM
+-- Server version: 5.6.22
+-- PHP Version: 5.4.23
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `geodatin_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(16) NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) CHARACTER SET utf8 NOT NULL,
+  `description` varchar(256) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `icon` varchar(128) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`, `description`, `icon`) VALUES
+(1, 'Test', '', 'upload/markers/2014-12-24-8811.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE IF NOT EXISTS `events` (
+  `id` int(16) NOT NULL AUTO_INCREMENT,
+  `cid` int(16) NOT NULL,
+  `title` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(128) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL,
+  `startDate` bigint(30) NOT NULL,
+  `endDate` bigint(30) NOT NULL,
+  `image` varchar(64) NOT NULL,
+  `description` varchar(256) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `cid`, `title`, `address`, `latitude`, `longitude`, `startDate`, `endDate`, `image`, `description`) VALUES
+(7, 1, 'alt loc', 'Smardan null Romania', 45.32956, 28.090645, 1420285776500, 1422373176500, '1420285945-2553.jpeg', ''),
+(8, 1, 'un titlu', 'Complexul Studen?esc Regie Bucharest Romania', 44.445539, 26.053264, 1421402406188, 1421748068229, '1421489063-6129.jpeg', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gcm_users`
+--
+
+CREATE TABLE IF NOT EXISTS `gcm_users` (
+  `id` int(16) NOT NULL AUTO_INCREMENT,
+  `registerID` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `deviceID` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `timestamp` bigint(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `gcm_users`
+--
+
+INSERT INTO `gcm_users` (`id`, `registerID`, `deviceID`, `timestamp`) VALUES
+(12, 'APA91bGU0fUrZei8Wq6yemRAtWjnk0qvs_R1eArGbPR9P66Cq5C4ZikeTGKi11LaKSdDmWufwIxEtwOdKl7dTU3KM_oTH-4kukRc0FxtWU6XCMYukFnmZzslEJ_tJFS1wbaPVVYeZGqSLFY9HVt_r6oEMFHR8dKlG8sCfpDBjFQEunIiQNhg_dI', 'ffffffff-c43e-83d1-0000-000022d2f55b', 1421489088);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
